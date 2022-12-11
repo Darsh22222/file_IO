@@ -1,4 +1,8 @@
-﻿namespace FileIOOperation
+﻿using Binary;
+using FileIOOperation;
+using System;
+
+namespace FileIOOperation
 {
     internal class Program
     {
@@ -10,7 +14,7 @@
             while (choice)
             {
                 Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n3. Read Text\n4.Copy File\n5.Deleting File" +
-                    "\n6.Read data Using Stream\n7.Write using StreamWriter\n8.Exit");
+                    "\n6.Read data Using Stream\n7.Write using StreamWriter\n8.Binary Serialization\n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,6 +40,9 @@
                         break;
                     case 7:
                         FileOperation.WriteUsingStreamWriter();
+                        break;
+                    case 8:
+                        BinarySerialization.Serialization();
                         break;
                     default:
                         choice = false;
