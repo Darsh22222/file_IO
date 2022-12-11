@@ -25,6 +25,12 @@ namespace FileIOOperation
                 Console.WriteLine(data);
             }
         }
+        public static void ReadAllText()
+        {
+            string filePath = @"C:\GetRepositry\file_IO\FileIOOperation\Operation.txt";
+            string lines = File.ReadAllText(filePath);
+            Console.WriteLine(lines);
+        }
     }
 }
 
