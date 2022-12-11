@@ -31,6 +31,12 @@ namespace FileIOOperation
             string lines = File.ReadAllText(filePath);
             Console.WriteLine(lines);
         }
+        public static void CopyFile()
+        {
+            string filePath = @"C:\GetRepositry\file_IO\FileIOOperation\Operation.txt";
+            string destinationFilePath = @"C:\GetRepositry\file_IO\FileIOOperation\Destination.txt";
+            File.Copy(filePath, destinationFilePath, true);
+        }
     }
 }
 

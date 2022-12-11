@@ -9,7 +9,7 @@
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n3. Read Text\n4.Exit");
+                Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n3. Read Text\n4.Copy File\n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -21,6 +21,10 @@
                         break;
                     case 3:
                         FileOperation.ReadAllText();
+                        break;
+                    case 4:
+                        FileOperation.CopyFile();
+                        Console.WriteLine("File Copied Successfully");
                         break;
                     default:
                         choice = false;
