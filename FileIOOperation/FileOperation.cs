@@ -37,6 +37,11 @@ namespace FileIOOperation
             string destinationFilePath = @"C:\GetRepositry\file_IO\FileIOOperation\Destination.txt";
             File.Copy(filePath, destinationFilePath, true);
         }
+        public static void DeleteFile()
+        {
+            string destinationFilePath = @"C:\GetRepositry\file_IO\FileIOOperation\Destination.txt";
+            File.Delete(destinationFilePath);
+        }
     }
 }
 
