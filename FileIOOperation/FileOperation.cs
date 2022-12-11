@@ -42,6 +42,19 @@ namespace FileIOOperation
             string destinationFilePath = @"C:\GetRepositry\file_IO\FileIOOperation\Destination.txt";
             File.Delete(destinationFilePath);
         }
+        public static void ReadFromStreamReader()
+        {
+            string filePath = @"C:\GetRepositry\file_IO\FileIOOperation\Operation.txt";
+            using (StreamReader sr = File.OpenText(filePath))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.ReadKey();
+        }
     }
 }
 
