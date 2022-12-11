@@ -16,5 +16,15 @@ namespace FileIOOperation
             else
                 Console.WriteLine("File Path Doesnt Exists");
         }
+        public static void ReadAllLines()
+        {
+            string filePath = @"C:\GetRepositry\file_IO\FileIOOperation\Operation.txt";
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (var data in lines)
+            {
+                Console.WriteLine(data);
+            }
+        }
     }
 }
+
