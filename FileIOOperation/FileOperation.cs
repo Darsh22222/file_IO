@@ -55,6 +55,17 @@ namespace FileIOOperation
             }
             Console.ReadKey();
         }
+        public static void WriteUsingStreamWriter()
+        {
+            string filePath = @"C:\GetRepositry\file_IO\FileIOOperation\Operation.txt";
+            using (StreamWriter sr = File.AppendText(filePath))
+            {
+                sr.WriteLine("\nThanksForJoin");
+                sr.Close();
+
+                Console.WriteLine(File.ReadAllText(filePath));
+            }
+        }
     }
 }
 
