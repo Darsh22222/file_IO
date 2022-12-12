@@ -15,7 +15,8 @@ namespace FileIOOperation
             while (choice)
             {
                 Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n3. Read Text\n4.Copy File\n5.Deleting File" +
-                    "\n6.Read data Using Stream\n7.Write using StreamWriter\n8.Binary Serialization\n9.Binary DeSerialization\n10.Exit");
+                    "\n6.Read data Using Stream\n7.Write using StreamWriter\n8.Binary Serialization\n9.Binary DeSerialization" +
+                    "\n10.JSONSerialization\n11.JSON Serialization or DeSerialization\n.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -47,6 +48,12 @@ namespace FileIOOperation
                         break;
                     case 9:
                         BinarySerialization.Deserialization();
+                        break;
+                    case 10:
+                        JSONSerialization.JsonSerialization();
+                        break;
+                    case 11:
+                        JSONSerialization.JsonDeSerialization();
                         break;
                     default:
                         choice = false;
