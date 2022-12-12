@@ -12,7 +12,7 @@ namespace FileIOOperation
         public static void Serialization()
         {
             Demo sample = new Demo();
-            FileStream fileStream = new FileStream(@"C:\GetRepositry\file_IO\FileIOOperation\Binary.txt", FileMode.Create);
+            FileStream fileStream = new FileStream(@"C:\GetRepositry\file_IO\FileIOOperation\Binary1.txt", FileMode.Create);
             BinaryFormatter formatter = new BinaryFormatter();
             formatter.Serialize(fileStream, sample);
             Console.ReadKey();
