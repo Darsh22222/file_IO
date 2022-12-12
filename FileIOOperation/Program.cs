@@ -1,4 +1,5 @@
 ﻿
+using Binary;
 using FileIOOperation;
 using System;
 
