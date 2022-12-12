@@ -5,9 +5,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Binary
+namespace FileIOOperation
 {
-    internal class BinarySerialization
+    public class BinarySerialization
     {
         public static void Serialization()
         {
@@ -19,7 +19,7 @@ namespace Binary
         }
         public static void Deserialization()
         {
-            FileStream fileStream = new FileStream(@"C:\GetRepositry\file_IO\FileIOOperation\Binary1.txt", FileMode.Open);
+            FileStream fileStream = new FileStream(@"C:\GetRepositry\file_IO\FileIOOperation\Binary.txt", FileMode.Open);
             BinaryFormatter formatter = new BinaryFormatter();
             Demo deserializedSampledemo = (Demo)formatter.Deserialize(fileStream);
             Console.WriteLine($"ApplicationName {deserializedSampledemo.Application_Name} --- ApplicationID {deserializedSampledemo.Application_ID}");

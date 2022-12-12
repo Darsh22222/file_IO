@@ -1,10 +1,10 @@
-﻿using Binary;
+﻿
 using FileIOOperation;
 using System;
 
 namespace FileIOOperation
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,7 +14,7 @@ namespace FileIOOperation
             while (choice)
             {
                 Console.WriteLine(" 1. Check Files Exists or Not\n 2. Read All Lines\n3. Read Text\n4.Copy File\n5.Deleting File" +
-                    "\n6.Read data Using Stream\n7.Write using StreamWriter\n8.Binary Serialization\n9.Exit");
+                    "\n6.Read data Using Stream\n7.Write using StreamWriter\n8.Binary Serialization\n9.Binary DeSerialization\n10.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -43,6 +43,9 @@ namespace FileIOOperation
                         break;
                     case 8:
                         BinarySerialization.Serialization();
+                        break;
+                    case 9:
+                        BinarySerialization.Deserialization();
                         break;
                     default:
                         choice = false;
